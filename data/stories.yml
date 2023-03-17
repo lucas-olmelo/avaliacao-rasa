@@ -1,0 +1,24 @@
+version: "3.1"
+
+stories:
+
+- story: defeito_tecnico
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: comunicarFalha
+  - action: utter_comunicarFalha
+  - intent: resposta
+  - action: utter_resposta
+  - intent: respostaAgendamento
+  - action: utter_respostaAgendamento
+
+- story: defeito_tecnico
+  steps:
+  - intent: saudacao
+  - action: utter_saudacao
+  - intent: pagarConta
+  - action: utter_pagarConta
+  - intent: informaCpf
+  - action: utter_informaCpf
+

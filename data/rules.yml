@@ -1,0 +1,13 @@
+version: "3.1"
+
+rules:
+
+- rule: Agradecimento do usuário
+  steps:
+  - intent: agradecimento
+  - action: utter_agradecimento
+
+- rule: Xingamento do usuário
+  steps:
+  - intent: xingamento
+  - action: utter_xingamento

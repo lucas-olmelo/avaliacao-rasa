@@ -1,0 +1,116 @@
+version: "3.1"
+
+nlu:
+- intent: saudacao
+  examples: |
+    - hey
+    - olá
+    - oi
+    - boa tarde
+    - bom dia
+    - boa noite
+    - opa
+    - eae mano
+    - salve meu consagrado
+    - oi meu chapa
+    - dia
+    - salve
+    - oi, tudo bem?
+
+- intent: comunicarFalha
+  examples: |
+    - estou sem internet
+    - meu roteador queimou
+    - minha internet está lenta
+    - estou sem internet a 2 dias
+    - minha internet foi de americanas
+    - meu roteador explodiu
+    - pq minha internet está tão ruim?
+    - você pode me ajudar com a minha internet?
+    - estou com problema na internet
+    - minha internet caiu
+    - tem uma luz vermelha no meu roteador
+    - a fibra quebrou
+
+- intent: resposta
+  examples: |
+    - sim
+    - nao
+    - claro que sim, né porra
+    - claro
+    - óbvio
+    - você não tá me perguntando isso...
+    - ah não
+    - pqp
+    - denovo não
+    - nn
+    - ss
+    - s
+    - n
+    - ñ
+
+- intent: respostaAgendamento
+  examples: |
+    - [sexta-feira de manhã](dia_visita)
+    - [quarta-feira](dia_visita)
+    - [segunda-feira a tarde](dia_visita)
+    - [dia 20](dia_visita)
+    - [de manhã](dia_visita)
+    - [sabado](dia_visita)
+    - [terca-feira, dia 13](dia_visita)
+    - [hoje](dia_visita)
+    - [terça](dia_visita)
+    - [quinta](dia_visita)
+    - [dia 12 de fevereiro](dia_visita)
+    - [15 de março](dia_visita)
+
+- intent: agradecimento
+  examples: |
+    - Obrigado
+    - Valeu
+    - Tmj
+    - Valeu bot!
+    - É nois
+    - Muito obrigado
+    - Desde já, agradeço
+    - Agradeço pela ajuda
+    - vlw
+    - Obrigado pela ajuda!
+    - obg
+    - Você é fera
+
+- intent: xingamento
+  examples: |
+    - seu bobão
+    - paspalho
+    - seu trouxa
+    - bot inútil
+    - vai tomar no cu
+    - vtnc
+    - vai se fude
+    - vsf
+    - fodase
+    - fdp
+    - filho da puta
+    - primata
+    
+- intent: pagarConta
+  examples: |
+    - quero pagar minha conta
+    - quero pagar conta
+    - pagar conta
+    - conta
+    - minha conta está vencida?
+    - estou devendo?
+    - tenho alguma pendencia com a morto?
+    - quero pagar a conta do mês
+
+- intent: informaCpf
+  examples: |
+    - 59814648112
+    - meu cpf é 25896314785
+    - cpf 45789658963
+    - o número do meu cpf é 47847854789
+    - número 13245896631
+    - eu acho que o meu cpf é 4865461254
+    - o cpf do titular é 45412145678

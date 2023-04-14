@@ -34,8 +34,6 @@ stories:
 - story: pagar_conta
   steps:
   - checkpoint: confirmar_operacao
-  - intent: saudacao
-  - action: utter_saudacao
   - intent: pagarConta
   - action: utter_pagarConta
   - intent: informaCpf

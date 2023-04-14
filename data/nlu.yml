@@ -34,6 +34,8 @@ nlu:
     - reportar defeito
     - problema tecnico
     - defeito tecnico
+    - minha internet não funciona
+    - meu roteador quebrou
 
 - intent: respostaPositiva
   examples: |

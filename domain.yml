@@ -3,7 +3,8 @@ version: "3.1"
 intents:
   - saudacao
   - comunicarFalha
-  - resposta
+  - respostaPositiva
+  - respostaNegativa
   - respostaAgendamento
   - agradecimento
   - xingamento
@@ -12,6 +13,7 @@ intents:
 
 entities:
   - dia_visita
+  - cpf_cliente
 
 slots:
   dia_visita_cliente:
@@ -21,15 +23,25 @@ slots:
     - type: from_entity
       entity: dia_visita
 
+  num_cpf_cliente:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: cpf_cliente
+
 responses:
   utter_saudacao:
-  - text: "Olá! Como posso ajudar?"
+  - text: "Olá! Você deseja reportar um problema técnico ou pagar uma conta?"
 
   utter_comunicarFalha:
   - text: "Você já verificou se o roteador está conectado à tomada?"
 
-  utter_resposta:
+  utter_resposta_positiva:
   - text: "Vamos agendar uma visita técnica a sua residência. Qual o dia disponível para a visita?"
+
+  utter_resposta_negativa:
+  - text: "Então verifica essa merda. Tá esperando o quê, porra?"
 
   utter_respostaAgendamento:
   - text: "Sua visita está agendada para {dia_visita_cliente}"
@@ -44,7 +56,7 @@ responses:
   - text: "Certo, você poderia me informar o CPF do titular?"
 
   utter_informaCpf:
-  - text: "O valor da sua conta é R$149,79. O código de barras da sua conta é 05151198151 198181819819 48494949494 62060000000"
+  - text: "O valor da sua conta, referente ao CPF {num_cpf_cliente} é R$149,79. O código de barras da sua conta é 05151198151 198181819819 48494949494 62060000000"
 
 session_config:
   session_expiration_time: 60

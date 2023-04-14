@@ -2,19 +2,38 @@ version: "3.1"
 
 stories:
 
-- story: defeito_tecnico
+- story: saudacao_morto
   steps:
   - intent: saudacao
   - action: utter_saudacao
   - intent: comunicarFalha
-  - action: utter_comunicarFalha
-  - intent: resposta
-  - action: utter_resposta
-  - intent: respostaAgendamento
-  - action: utter_respostaAgendamento
+  - checkpoint: confirmar_operacao
+
 
 - story: defeito_tecnico
   steps:
+  - checkpoint: confirmar_operacao
+  - action: utter_comunicarFalha
+  - checkpoint: verificou_roteador
+
+- story: resposta_positiva
+  steps:
+  - checkpoint: verificou_roteador
+  - intent: respostaPositiva
+  - action: utter_resposta_positiva
+  - intent: respostaAgendamento
+  - action: utter_respostaAgendamento
+
+- story: resposta_negativa
+  steps:
+  - checkpoint: verificou_roteador
+  - intent: respostaNegativa
+  - action: utter_resposta_negativa
+  - checkpoint: confirmar_operacao
+
+- story: pagar_conta
+  steps:
+  - checkpoint: confirmar_operacao
   - intent: saudacao
   - action: utter_saudacao
   - intent: pagarConta

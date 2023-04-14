@@ -31,23 +31,32 @@ nlu:
     - minha internet caiu
     - tem uma luz vermelha no meu roteador
     - a fibra quebrou
+    - reportar defeito
+    - problema tecnico
+    - defeito tecnico
 
-- intent: resposta
+- intent: respostaPositiva
   examples: |
     - sim
-    - nao
     - claro que sim, né porra
     - claro
     - óbvio
     - você não tá me perguntando isso...
-    - ah não
     - pqp
     - denovo não
-    - nn
+    - ah não
     - ss
     - s
+
+- intent: respostaNegativa
+  examples: |
+    - nao
+    - nn
     - n
     - ñ
+    - ainda nao
+    - esqueci
+    - era pra ter olhado?
 
 - intent: respostaAgendamento
   examples: |
@@ -63,6 +72,18 @@ nlu:
     - [quinta](dia_visita)
     - [dia 12 de fevereiro](dia_visita)
     - [15 de março](dia_visita)
+    - [sexta feira de manhã](dia_visita)
+    - [quarta feira](dia_visita)
+    - [segunda feira a tarde](dia_visita)
+    - [dia 1 de abril](dia_visita)
+    - [dia 23 de agosto](dia_visita)
+    - [dia 20 de outubro, ás 9hrs](dia_visita)
+    - [dia 30 de dezembro, as 15hrs](dia_visita)
+    - [sabado, ás 13hs](dia_visita)
+    - [segunda, ás 16hs](dia_visita)
+    - [terça feira as 12hs](dia_visita)
+    - [10 de novembro, 14hrs](dia_visita)
+    - [11 de agosto as 10hrs](dia_visita)
 
 - intent: agradecimento
   examples: |
@@ -93,6 +114,7 @@ nlu:
     - fdp
     - filho da puta
     - primata
+    - cuzao
     
 - intent: pagarConta
   examples: |
@@ -107,10 +129,10 @@ nlu:
 
 - intent: informaCpf
   examples: |
-    - 59814648112
-    - meu cpf é 25896314785
-    - cpf 45789658963
-    - o número do meu cpf é 47847854789
-    - número 13245896631
-    - eu acho que o meu cpf é 4865461254
-    - o cpf do titular é 45412145678
+    - [59814648112](cpf_cliente)
+    - meu cpf é [25896314785](cpf_cliente)
+    - cpf [45789658963](cpf_cliente)
+    - o número do meu cpf é [47847854789](cpf_cliente)
+    - número [13245896631](cpf_cliente)
+    - eu acho que o meu cpf é [4865461254](cpf_cliente)
+    - o cpf do titular é [45412145678](cpf_cliente)

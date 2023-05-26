@@ -15,6 +15,9 @@ entities:
   - dia_visita
   - cpf_cliente
 
+actions:
+  - action_mostra_boleto
+
 slots:
   dia_visita_cliente:
     type: text

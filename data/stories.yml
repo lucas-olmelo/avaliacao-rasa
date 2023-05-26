@@ -9,7 +9,6 @@ stories:
   - intent: comunicarFalha
   - checkpoint: confirmar_operacao
 
-
 - story: defeito_tecnico
   steps:
   - checkpoint: confirmar_operacao
@@ -37,5 +36,4 @@ stories:
   - intent: pagarConta
   - action: utter_pagarConta
   - intent: informaCpf
-  - action: utter_informaCpf
-
+  - action: action_mostra_boleto

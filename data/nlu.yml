@@ -138,3 +138,13 @@ nlu:
     - número [13245896631](cpf_cliente)
     - eu acho que o meu cpf é [4865461254](cpf_cliente)
     - o cpf do titular é [45412145678](cpf_cliente)
+
+- intent: start
+  examples: |
+    - /start
+    - start
+
+- intent: help
+  examples: |
+    - /help
+    - help

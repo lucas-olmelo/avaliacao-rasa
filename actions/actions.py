@@ -13,7 +13,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 import datetime
 
-class Action_Mostra_Boleto():
+class Action_Mostra_Boleto(Action):
 
     def name(self) -> Text:
         return "action_mostra_boleto"
@@ -23,6 +23,9 @@ class Action_Mostra_Boleto():
             domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         
         dia = datetime.date.today().day
+        mes = datetime.date.today().month
+
+        dia = 26
 
         if (dia <= 15):
             conta_em_dia = True
@@ -30,6 +33,7 @@ class Action_Mostra_Boleto():
             conta_em_dia = False
 
         if (conta_em_dia == False):
+
             dias_atraso = dia - 16
             valor_conta = 149.90
 
@@ -37,13 +41,10 @@ class Action_Mostra_Boleto():
             juros_totais = juros_dia * dias_atraso
             valor_com_juros = valor_conta + juros_totais
 
-            txt_confirmacao = "O valor da sua conta é R$"+ valor_com_juros
+            txt_confirmacao = f'O valor da sua conta, referente ao mês {(mes)} é de R${(valor_com_juros):,.2f}, sendo o valor de sua conta (R$149,90), acrescido de R${(juros_totais):,.2f} de juros por {(dias_atraso)} dias de atraso'
 
         else:
-            txt_confirmacao = "O valor da sua conta é R$149.90"
+            txt_confirmacao = f"O valor da sua conta, referente ao mês {(mes)} é R$149.90"
 
         dispatcher.utter_message(text=txt_confirmacao)
         return []
-
-
-

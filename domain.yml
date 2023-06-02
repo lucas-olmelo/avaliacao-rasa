@@ -10,6 +10,8 @@ intents:
   - xingamento
   - pagarConta
   - informaCpf
+  - start
+  - help
 
 entities:
   - dia_visita
@@ -36,6 +38,9 @@ slots:
 responses:
   utter_saudacao:
   - text: "Olá! Você deseja reportar um problema técnico ou pagar uma conta?"
+
+  utter_help:
+  - text: "Eu sou um Bot da operadora de telefonia e banda larga Morto. Estou aqui para te ajudar com seus problemas com internet e contas"
 
   utter_comunicarFalha:
   - text: "Você já verificou se o roteador está conectado à tomada?"

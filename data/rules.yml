@@ -11,3 +11,13 @@ rules:
   steps:
   - intent: xingamento
   - action: utter_xingamento
+
+- rule: Saudação do start
+  steps:
+  - intent: start
+  - action: utter_saudacao
+
+- rule: Resposta do help
+  steps:
+  - intent: help
+  - action: utter_help
